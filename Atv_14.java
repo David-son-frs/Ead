@@ -1,0 +1,27 @@
+package Listas_Matrizes_For_Each;
+
+import java.util.Scanner;
+
+public class Atv_14 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] matriz = new int[3][3];
+        int soma = 0;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print("Elemento [" + i + "][" + j + "]: ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            soma += matriz[i][i];
+        }
+
+        System.out.println("A soma dos elementos da diagonal principal é: " + soma);
+
+        sc.close();
+    }
+}
+
